@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
-    "download_url": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.0.1/AutoLab_Setup.exe",
+    "version": "1.0.2",
+    "download_url": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.0.2/AutoLab_Setup.exe",
     "notes": "- 🚀 **BIG REBRAND:** Renamed from NewsBuilder to **AutoLab**!\n- ✨ **New Identity:** All UI and texts updated to AutoLab.\n- 🛠️ **Fresh Start:** New AppId for clean installation (Settings reset).\n- 📦 **System:** Improved folder structure and installation path."
 }
