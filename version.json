@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
-    "download_url": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.0.0/AutoLab_Setup.exe",
-    "notes": "- New: Smart Update Notification System (Pulse/Glow UI).\n- Improved: Auto-check for updates on startup.\n- Fixed: Version detection issues."
+    "version": "1.0.1",
+    "download_url": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.0.1/AutoLab_Setup.exe",
+    "notes": "- 🚀 **BIG REBRAND:** Renamed from NewsBuilder to **AutoLab**!\n- ✨ **New Identity:** All UI and texts updated to AutoLab.\n- 🛠️ **Fresh Start:** New AppId for clean installation (Settings reset).\n- 📦 **System:** Improved folder structure and installation path."
 }
