@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
-    "download_url": "https://github.com/Babydunx1/NewsBuilder-Release/releases/download/update1.0.3/NewsBuilder_Setup.exe",
+    "version": "1.0.0",
+    "download_url": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.0.0/AutoLab_Setup.exe",
     "notes": "- New: Smart Update Notification System (Pulse/Glow UI).\n- Improved: Auto-check for updates on startup.\n- Fixed: Version detection issues."
 }
