@@ -1,9 +1,9 @@
 {
-    "version": "1.0.5",
+    "version": "1.1.5",
     "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.5/AutoLab_Setup.exe",
     "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.5/AutoLab_Mac_Beta.zip",
     "notes": [
-        "✨ What's New in 1.0.5",
+        "✨ What's New in 1.1.5",
         "",
         "🎬 Auto Frames - Queue System (Major Update)",
         "  • [NEW] ระบบคิวแบบ Multi-Clip / Bin",
