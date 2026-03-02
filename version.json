@@ -1,7 +1,7 @@
 {
-    "version": "1.1.6",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.6/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.6/AutoLab_Mac_Beta.zip",
+    "version": "1.1.7",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.7/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.7/AutoLab_Mac_Beta.zip",
     "notes": [
         "✨ HOT FIX BUG",
         "",
@@ -16,6 +16,7 @@
         "  • ลบ Retry Loop ที่ไม่จำเป็น - เร็วขึ้นอย่างมาก",
         "",
         "🔧 Bug Fixes",
+        "  • 🛠 [HOTFIX] แก้ปัญหาโหมดคิว AI SMART ทำงานไม่เต็มระบบ",
         "  • แก้ปัญหา Sequence ไม่อยู่ใน Bin ที่ถูกต้อง",
         "  • แก้ปัญหา Batch Mode ไม่สร้างโฟลเดอร์ตามชื่อ Bin",
         "  • ปรับปรุงความเสถียรสำหรับเครื่องช้า (MOGRT Timeout 10s)",
