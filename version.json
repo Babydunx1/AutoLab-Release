@@ -1,20 +1,19 @@
 {
-    "version": "1.1.8",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.8/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.8/AutoLab_Mac_Beta.zip",
+    "version": "1.1.9",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.9/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.1.9/AutoLab_Mac_Beta.zip",
     "notes": [
-        "🎬 FEATURE UPDATE AUTO FRAMES",
-        "  • [NEW] 🔥 รองรับการเพิ่ม text ลงใน Mogrt auto frame",
-        "  • [NEW] รองรับการเพิ่มกรอบลงใน Sequence เดิมที่ตัดไว้แล้วโดยตรง",
-        "  • [NEW] ระบบคิวแบบ Multi-Clip / Bin",
-        "  • [NEW] กำหนด พรีเซ็ท แยกตาม Bin ได้เอง",
-        "  • [NEW] Progress Tracking แบบ Real-time",
-        "  • [NEW] สร้างโฟลเดอร์ AutoCut_[BinName] ไฟล์ที่ตัดจะอยู่ข้างใน",
+        "✨ AUTO HIGHLIGHTS ENGINE เปิดให้บริการแล้ว (v1.1.9)",
         "",
-        "  • แก้ปัญหา Sequence ไม่อยู่ใน Bin ที่ถูกต้อง",
-        "  • ปรับปรุงความเสถียรสำหรับเครื่องช้า (MOGRT Timeout 10s)",
+        "  • [NEW] เปิดตัว Auto Highlights สร้างคลิปสั้นไฮไลท์จากวิดีโอยาวอัตโนมัติ (รองรับ Multi-Sequence)",
+        "  • [NEW] ทำงานร่วมกับ AI Vision คัดเนื้อหาที่ดีที่สุด",
+        "  • [📌Trick] สามารถทำงานร่วมกับ auto frame ได้ เพื่อวางกรอบ และ text อัตโนมัติ",
         "",
-        "📝 Note: Auto Highlights อยู่ระหว่างพัฒนา - ยังไม่เปิดให้ใช้งาน"
+        "🛠️ AUTO FRAMES",
+        "  • [FIX] 🛠️ แก้ปัญหาตั้งค่าปรับขนาดกรอบไม่ได้",
+        "  • [FIX]  รองรับการเพิ่ม text ลงใน MOGRT อัตโนมัติ",
+        "  • [NEW] รองรับการเพิ่มกรอบ และ text ลงใน Sequence เดิม",
+        "  • [NEW] ระบบคิวแบบ Multi-Clip / Bin"
     ],
     "app_status": "active",
     "blacklist": [],
@@ -24,4 +23,3 @@
         "A25B-7FD8-A98E-CB60"
     ],
     "lock_message": "License Key ของคุณถูกระงับการใช้งาน\nกรุณาติดต่อ Support เพื่อตรวจสอบครับ"
-}
