@@ -1,9 +1,9 @@
 {
-    "version": "1.2.4",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.4/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.4/AutoLab_Mac_Beta.zip",
+    "version": "1.2.5",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.5/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.5/AutoLab_Mac_Beta.zip",
     "notes": [
-        "🔥 CRITICAL HOTFIX (v1.2.4)",
+        "🔥 CRITICAL HOTFIX (v1.2.5)",
         "  • [FIX] แก้ปัญหา auto text ไม่ทำงาน",
         "",
         "🌟 AUTO HIGHLIGHTS (ENGINE V2)",
