@@ -13,9 +13,10 @@
         "  • [IMPROVE] ✨ อัปเกรดระบบ Auto Highlights",
         "  • [FIX] 🍎 แก้บั๊กผู้ใช้ Mac กดปุ่มในหน้า AI Captions ไม่ได้",
         "",
-        "   Auto Highlights & Captions UPDATE (v1.2.6)",
-        "  • [IMPROVE] ✨ อัปเกรดระบบ Auto Highlights",
-        "  • [FIX] 🍎 แก้บั๊กผู้ใช้ Mac กดปุ่มในหน้า AI Captions ไม่ได้"
+        " Auto Frame UPDATE (v1.2.6)",
+        "  • [NEW] 🌟 ระบบ Drag & Drop ลากไฟล์ MOGRTs ลงมาใช้งานได้ทันที",
+        "  • [NEW] 📁 เพิ่มปุ่ม Reveal กดเปิดไปที่ไฟล์ต้นฉบับได้ทันที",
+        "  • [NEW] 🗑️ รองรับการกดลบไฟล์ MOGRTs (ที่เพิ่งดรอป) ผ่านปุ่ม Delete บนคีย์บอร์ดแล้ว"
     ],
     "app_status": "active",
     "blacklist": [],
