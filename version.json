@@ -1,16 +1,21 @@
 {
-    "version": "1.2.7",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.7/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.7/AutoLab_Mac_Beta.zip",
+    "version": "1.2.8",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.8/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.8/AutoLab_Mac_Beta.zip",
     "notes": [
+        "🔥 Auto Highlights MAJOR UPDATE (v1.2.8)",
+        "  • [NEW] 🤖 เพิ่มโมเดล 'Gemini 3.1 Flash-Lite' แนะนำให้ใช้",
+        "  • [IMPROVE] แก้ไขปัญหา AI ในการตัดคลิป",
+        "  • [IMPROVE] แก้บั๊ก AI ข้ามช็อตท้ายๆ ของวิดีโอคลิปยาว",
+        "  • [IMPROVE] ปรับปรุงประสิทธิภาพ AI ฉลาดขึ้น",
+        "",
         "🔥 Auto Highlights & Captions UPDATE (v1.2.7)",
         "  • [IMPROVE] ✨ อัปเกรดระบบ Auto Highlights",
         "  • [FIX] 🍎 แก้บั๊กผู้ใช้ Mac กดปุ่มในหน้า AI Captions ไม่ได้",
         "",
-        "🔥 Auto Frame UPDATE (v1.2.6)",
-        "  • [NEW] 🌟 ระบบ Drag & Drop ลากไฟล์ MOGRTs ลงมาใช้งานได้ทันที",
-        "  • [NEW] 📁 เพิ่มปุ่ม Reveal กดเปิดไปที่ไฟล์ต้นฉบับได้ทันที",
-        "  • [NEW] 🗑️ รองรับการกดลบไฟล์ MOGRTs (ที่เพิ่งดรอป) ผ่านปุ่ม Delete บนคีย์บอร์ดแล้ว"
+        "   Auto Highlights & Captions UPDATE (v1.2.6)",
+        "  • [IMPROVE] ✨ อัปเกรดระบบ Auto Highlights",
+        "  • [FIX] 🍎 แก้บั๊กผู้ใช้ Mac กดปุ่มในหน้า AI Captions ไม่ได้"
     ],
     "app_status": "active",
     "blacklist": [],
