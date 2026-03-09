@@ -1,15 +1,16 @@
 {
-    "version": "1.2.6",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.6/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.6/AutoLab_Mac_Beta.zip",
+    "version": "1.2.7",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.7/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.2.7/AutoLab_Mac_Beta.zip",
     "notes": [
+        "🔥 Auto Highlights & Captions UPDATE (v1.2.7)",
+        "  • [IMPROVE] ✨ อัปเกรดระบบ Auto Highlights",
+        "  • [FIX] 🍎 แก้บั๊กผู้ใช้ Mac กดปุ่มในหน้า AI Captions ไม่ได้",
+        "",
         "🔥 Auto Frame UPDATE (v1.2.6)",
         "  • [NEW] 🌟 ระบบ Drag & Drop ลากไฟล์ MOGRTs ลงมาใช้งานได้ทันที",
         "  • [NEW] 📁 เพิ่มปุ่ม Reveal กดเปิดไปที่ไฟล์ต้นฉบับได้ทันที",
-        "  • [NEW] 🗑️ รองรับการกดลบไฟล์ MOGRTs (ที่เพิ่งดรอป) ผ่านปุ่ม Delete บนคีย์บอร์ดแล้ว",
-        "",
-        "🔥 CRITICAL HOTFIX (v1.2.5)",
-        "  • [FIX] แก้ปัญหา auto text ไม่ทำงาน"
+        "  • [NEW] 🗑️ รองรับการกดลบไฟล์ MOGRTs (ที่เพิ่งดรอป) ผ่านปุ่ม Delete บนคีย์บอร์ดแล้ว"
     ],
     "app_status": "active",
     "blacklist": [],
