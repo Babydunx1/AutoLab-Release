@@ -1,18 +1,17 @@
 {
-    "version": "1.3.2",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.2/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.2/AutoLab_Mac_Beta.zip",
+    "version": "1.3.3",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.3/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.3/AutoLab_Mac_Beta.zip",
     "notes": [
-        "★ Auto Frame UPDATE (v1.3.2)",
-        "  • [UPDATE] AI Auto-Name ให้แม่นยำมากขึ้น",
-        "  • [IMPROVE] ปรับคุณภาพ prompt ให้ดีขึ้น",
-        "  • [FIX] แก้ปัญหาชื่อยาวเกินไป",
-        "  • [HOTFIX] แก้จุดที่ทำให้ AI ไม่คืนผลลัพธ์",
+        "★ Auto Highlights UPDATE (v1.3.3)",
+        "  • [NEW] เพิ่มระบบซ่อมไฟล์ Engine อัตโนมัติ",
+        "  • [UPDATE] อัปเดตการตรวจจับการ์ดจอ Nvidia",
+        "  • [FIX] แก้ปัญหาการ์ดจอ Nvidia ไม่ทำงาน",
+        "  • [FIX] แก้ปัญหาแสกนคลิปค้าง",
         "",
         "✦ CORE IMPROVEMENTS",
-        "  • [IMPROVE] ปรับความเสถียรโดยรวมของระบบ",
-        "  • [FIX] แก้บั๊กข้อความและสถานะไม่ถูกต้อง",
-        "  • [HOTFIX] แก้ปัญหา AI ไม่คืนผลลัพธ์หลังแพตล่าสุด"
+        "  • [IMPROVE] ปรับปรุงความเสถียรของ Auto Highlights",
+        "  • [HOTFIX] แก้ปัญหา UI แสกนเงียบเมื่อฮาร์ดแวร์ทำงานผิดพลาด"
     ],
     "app_status": "active",
     "blacklist": [],
