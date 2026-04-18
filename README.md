@@ -64,11 +64,12 @@
 
 ## 🛠 การติดตั้ง (Installation)
 
-1. ดาวน์โหลดไฟล์ `AutoLab.zxp` จากหน้า [Releases](../../releases)
-2. ติดตั้งผ่านโปรแกรม ZXP Installer เช่น [Anastasiy's Extension Manager](https://install.anastasiy.com/)
-3. เปิด Adobe Premiere Pro ไปที่เมนู `Window` > `Extensions` > `AutoLab`
-4. ล็อกอินเข้าสู่ระบบ (ระบบมีการผูก Device ID เพื่อความปลอดภัย)
-5. เริ่มใช้งานได้ทันที!
+1. ดาวน์โหลดไฟล์ติดตั้งจากหน้า [Releases](../../releases)
+   - **Windows:** โหลดไฟล์ `AutoLab_Setup.exe` แล้วรันเพื่อติดตั้งได้อัตโนมัติ
+   - **Mac:** โหลดไฟล์ `AutoLab_Mac_Beta.zip` (ยังไม่เสถียรเท่าเวอร์ชัน Windows ในเรื่องการติดตั้ง อาจติดปัญหาเรื่องการอนุญาตให้รันโปรแกรมบน Mac)
+2. เปิด Adobe Premiere Pro ไปที่เมนู `Window` > `Extensions` > `AutoLab`
+3. ล็อกอินเข้าสู่ระบบ (ระบบจะทำการผูก Device ID ของเครื่องเพื่อความปลอดภัย)
+4. เริ่มใช้งานได้ทันที!
 
 ---
 
