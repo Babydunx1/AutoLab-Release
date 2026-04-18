@@ -1,8 +1,13 @@
 {
-    "version": "1.3.5",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.5/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.5/AutoLab_Mac_Beta.zip",
+    "version": "1.3.6",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.6/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.3.6/AutoLab_Mac_Beta.zip",
     "notes": [
+        "★ Security & System Update (v1.3.6)",
+        "  • [SECURITY] อัปเดตแพตช์ความปลอดภัยของระบบ (Critical)",
+        "  • [IMPROVE] ปรับปรุงการเชื่อมต่อพื้นหลังให้ทำงานเสถียรขึ้น",
+        "  • แนะนำให้อัปเดตเป็นเวอร์ชันนี้เพื่อการใช้งานที่ต่อเนื่องครับ",
+        "",
         "★ Name Refiner HOTFIX (v1.3.5)",
         "  • [HOTFIX] แก้ AI สร้างชื่อยาวเกินไป",
         "  • [IMPROVE] อัปเกรด AI ให้ย่อชื่อได้คมและกระชับขึ้น",
@@ -17,14 +22,7 @@
         "✦ CHAT & APPLY IMPROVEMENTS",
         "  • [FIX] แก้โหมด consult ให้กด Apply ชื่อที่ AI เสนอได้",
         "  • [FIX] ลดปัญหาแชทหายตอนเปิด popup ซ้ำหรือกด backdrop",
-        "  • [IMPROVE] ปรับการ์ดผลลัพธ์ให้เห็นข้อมูลสำคัญได้ง่ายขึ้น",
-        "",
-        "✦ NAME REFINER TUNING",
-        "  • [IMPROVE] จูนโหมด Variety ให้คิดชื่อแบบ hook-first และคมขึ้นบนฟีด",
-        "  • [IMPROVE] ลดการรีไรต์ชื่อสั้นที่ใช้ได้อยู่แล้ว ให้คงชื่อที่พร้อมใช้มากขึ้น",
-        "  • [FIX] ลดปัญหาชื่อไทยเว้นวรรคเพี้ยนหลังย่อหรือประกอบคำ",
-        "  • [FIX] กันชื่อถูกแปลงเป็นคำถามแนว \"คืออะไร\" หรือ \"...ไหม\" โดยไม่จำเป็น",
-        "  • [FIX] แก้การกด Apply สำหรับคลิปเดี่ยวที่มีหลายตัวเลือกให้ sync กลับ UI ถูกต้อง"
+        "  • [IMPROVE] ปรับการ์ดผลลัพธ์ให้เห็นข้อมูลสำคัญได้ง่ายขึ้น"
     ],
     "app_status": "active",
     "blacklist": [],
