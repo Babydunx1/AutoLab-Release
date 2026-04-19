@@ -25,7 +25,7 @@
 
 > 📌 **วิธีเพิ่มเทมเพลต MOGRT ลงใน AutoLab:**
 
-https://github.com/user-attachments/assets/7e425d02-f1fa-4c66-8d89-049cf5879714
+<img width="800" height="450" alt="Image" src="https://github.com/user-attachments/assets/22d490c5-db80-4c70-95e6-0196ec94d667" />
 
 ---
 
@@ -72,7 +72,7 @@ https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
 - จำกัดและควบแน่นเนื้อหาให้อยู่ในความยาวตัวอักษรที่เหมาะสมกับการโพสต์โซเชียลมีเดีย ช่วยเพิ่มโอกาสในการเป็นไวรัล
 - Ai director chat สามารถสั่งให้ ai แก้ชื่อพาดหัวคลิปได้อิสระ ตามต้องการ 
 
-<!-- 🎬 LLM DIRECTOR CHAT GIF — วาง URL ของ GIF แชท LLM ตรงนี้เมื่อมีแล้ว -->
+<img width="800" height="450" alt="Image" src="https://github.com/user-attachments/assets/024593c4-b8dd-4bf7-a240-3e2a9351e3ec" />
 
 ---
 
@@ -98,7 +98,7 @@ https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
 หากพบปัญหาการใช้งาน มีข้อเสนอแนะ หรือต้องการสอบถามรายละเอียดเพิ่มเติม สามารถติดต่อเราได้ที่:
 
 - 👾 **Discord Community & Support:** [คลิกที่นี่เพื่อเข้าร่วม Discord](#)
-- 📧 **Email:** support@autolab.com
+
 
 ---
 
