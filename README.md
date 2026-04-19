@@ -9,6 +9,11 @@
   [![Version](https://img.shields.io/badge/Version-1.3.6-ff5500?style=for-the-badge)](#)
   [![Platform](https://img.shields.io/badge/Platform-Windows_|_Mac-lightgrey?style=for-the-badge)](#)
 
+  <br>
+  <a href="../../releases/latest">
+    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_LATEST_VERSION-2ea44f?style=for-the-badge" alt="Download AutoLab" />
+  </a>
+  <br><br>
   <p align="center">
     <a href="#-ทำไมต้อง-autolab">ทำไมต้อง AutoLab?</a> •
     <a href="#-ฟีเจอร์หลัก-core-features">ฟีเจอร์หลัก</a> •
@@ -16,7 +21,6 @@
     <a href="#-ติดต่อ--support">ติดต่อ Support</a>
   </p>
 </div>
-
 ---
 
 ## 🌟 ทำไมต้อง AutoLab?
