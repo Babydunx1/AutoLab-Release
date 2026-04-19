@@ -56,7 +56,13 @@ https://github.com/user-attachments/assets/fec57da9-1189-4317-818b-5a0d083d7692
 - ระบบวิเคราะห์ Waveform ระดับความดังของเสียง เพื่อค้นหาและตัดช่วงที่ไม่มีการพูด (Dead Air) ออกทั้งหมดแบบอัตโนมัติ
 - ภาพและเสียงลื่นไหล ไม่กระตุก Sync ตรงกันสมบูรณ์แบบ ทำงานด้วยความเร็วสูง
 
-https://github.com/user-attachments/assets/2ad2831f-69e7-4f1b-b97d-0bc96ff58cef
+https://github.com/user-attachments/assets/a118fc60-8ce4-430b-bd1b-752daacdd82f
+
+#### ฟังก์ชันเสริมการตัด (Sub-features)
+| ✂️ In-to-Out Cut | ✂️ Mark In-to-Out |
+| :---: | :---: |
+| <img width="400" height="225" alt="Image" src="https://github.com/user-attachments/assets/3bdeb629-437b-46eb-850f-d3056ab38966" /> | <img width="400" height="225" alt="Image" src="https://github.com/user-attachments/assets/2a17012e-c8df-4a49-b172-4e8530a0e386" /> |
+| เลือกลบคลิปเฉพาะช่วงเวลา In-Out | ตัดแล้วมาร์คจุดเริ่มต้น-สิ้นสุดให้อัตโนมัติ |
 
 ### 💬 4. AI Captions & Subtitles
 ระบบสร้างและฝังซับไตเติ้ลลงในวิดีโออย่างชาญฉลาดและรวดเร็ว
