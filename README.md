@@ -97,7 +97,7 @@ https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
 
 หากพบปัญหาการใช้งาน มีข้อเสนอแนะ หรือต้องการสอบถามรายละเอียดเพิ่มเติม สามารถติดต่อเราได้ที่:
 
-- 👾 **Discord Community & Support:** [คลิกที่นี่เพื่อเข้าร่วม Discord](#)
+- 👾 **Discord Community & Support:** [คลิกที่นี่เพื่อเข้าร่วม Discord](https://discord.gg/tXWT2mMFFW)
 
 
 ---
