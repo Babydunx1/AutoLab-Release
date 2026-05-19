@@ -271,6 +271,23 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Play/Pause video only when visible on screen to prevent lag
+const videoObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (entry.isIntersecting) {
+      video.play().catch(err => {}); // Play when visible
+    } else {
+      video.pause(); // Pause when out of view
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('video').forEach(video => {
+  video.removeAttribute('autoplay'); // Remove default autoplay so it doesn't play all at once
+  videoObserver.observe(video);
+});
 </script>
 </body>
 </html>
