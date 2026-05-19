@@ -1,10 +1,14 @@
 {
-    "version": "1.4.4",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.4/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.4/AutoLab_Mac_Beta.zip",
+    "version": "1.4.5",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.5/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.5/AutoLab_Mac_Beta.zip",
     "starter_pack_url": "",
     "starter_pack_version": "1.0",
     "notes": [
+        "★ AutoLab Feature Update (v1.4.5)",
+        "✦ AUTO FRAME ENHANCEMENTS",
+        "  • [NEW] เพิ่มระบบ Starter Pack MOGRTs สำหรับ Subscriber",
+        "",
         "★ AutoLab Feature Update (v1.4.4)",
         "✦ AUTO HIGHLIGHTS",
         "  • [NEW] เพิ่มระบบปรับความเร็ววิดีโออัตโนมัติ",
