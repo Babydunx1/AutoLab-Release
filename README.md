@@ -1,115 +1,167 @@
 <div align="center">
-  <img src="AutoLabLOGO.png" alt="AutoLab Logo" width="120" height="120" />
 
-  # 🚀 AutoLab: The Ultimate Editing Assistant for Premiere Pro
-  
-  **เปลี่ยนชั่วโมงการตัดต่อให้เหลือเพียงไม่กี่นาที ด้วยระบบอัตโนมัติที่ออกแบบมาเพื่อคนทำคอนเทนต์โดยเฉพาะ**
+<img src="AutoLabLOGO.png" alt="AutoLab Logo" width="140" />
 
-  [![Premiere Pro](https://img.shields.io/badge/Premiere_Pro-CC_2022+-9999ff?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)](#)
-  [![Version](https://img.shields.io/badge/Version-1.3.6-ff5500?style=for-the-badge)](#)
-  [![Platform](https://img.shields.io/badge/Platform-Windows_|_Mac-lightgrey?style=for-the-badge)](#)
+# AutoLab — The Ultimate Editing Assistant for Premiere Pro
 
-  <br>
-  <a href="../../releases/latest">
-    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_LATEST_VERSION-2ea44f?style=for-the-badge" alt="Download AutoLab" />
-  </a>
-  <br><br>
-  <p align="center">
-    <a href="#-ทำไมต้อง-autolab">ทำไมต้อง AutoLab?</a> •
-    <a href="#-ฟีเจอร์หลัก-core-features">ฟีเจอร์หลัก</a> •
-    <a href="#-การติดตั้ง-installation">การติดตั้ง</a> •
-    <a href="#-ติดต่อ--support">ติดต่อ Support</a>
-  </p>
+**เปลี่ยนชั่วโมงการตัดต่อให้เหลือเพียงไม่กี่นาที**
+ด้วยระบบอัตโนมัติที่ออกแบบมาเพื่อคนทำคอนเทนต์โดยเฉพาะ
+
+[![Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-CC%202022+-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)](#)
+[![Version](https://img.shields.io/badge/Version-1.4.4-FF5500?style=for-the-badge&logo=github&logoColor=white)](#)
+[![Platform](https://img.shields.io/badge/Windows%20%7C%20macOS-Supported-0A84FF?style=for-the-badge&logo=windows&logoColor=white)](#)
+[![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FXtK7j9E7C)
+
+<br/>
+
+<a href="../../releases/latest">
+  <img src="https://img.shields.io/badge/⬇️%20%20DOWNLOAD%20LATEST%20VERSION-2EA44F?style=for-the-badge" alt="Download AutoLab" />
+</a>
+
+<br/><br/>
+
+<p>
+  <a href="#-ทำไมต้อง-autolab">ทำไมต้อง AutoLab?</a> &nbsp;•&nbsp;
+  <a href="#-core-features">Core Features</a> &nbsp;•&nbsp;
+  <a href="#-installation">Installation</a> &nbsp;•&nbsp;
+  <a href="#-support">Support</a>
+</p>
+
 </div>
+
 ---
 
 ## 🌟 ทำไมต้อง AutoLab?
-ปัญหาคลาสสิกของนักตัดต่อคือการเสียเวลากับงานจำเจ เช่น การสร้าง Sequence ตามไซส์ต่างๆ, การใส่กรอบกราฟิกเดิมๆ, การตัดช่องว่างเสียง (Dead Air), การทำซับไตเติ้ล หรือการนั่งหาจุดไฮไลท์ในคลิปยาวๆ 
-**AutoLab** คือ Extension บน Adobe Premiere Pro ที่รวบรวมสุดยอดเครื่องมืออัตโนมัติ เพื่อเข้ามาช่วยจัดการงานที่น่าเบื่อเหล่านี้ให้จบได้ใน **ไม่กี่คลิก** ช่วยให้คุณประหยัดเวลาและโฟกัสกับความคิดสร้างสรรค์ได้มากขึ้น!
+
+> ปัญหาคลาสสิกของนักตัดต่อคือการเสียเวลากับงานจำเจ — สร้าง Sequence, ใส่กรอบกราฟิก, ตัด Dead Air, ทำซับไตเติ้ล, หรือนั่งหาจุดไฮไลท์ในคลิปยาวๆ
+
+**AutoLab** คือ Extension บน Adobe Premiere Pro ที่รวบรวมสุดยอดเครื่องมืออัตโนมัติ
+เพื่อจัดการงานเหล่านี้ให้จบได้ใน **ไม่กี่คลิก** — ประหยัดเวลา โฟกัสกับความคิดสร้างสรรค์ได้มากขึ้น
 
 > 📌 **วิธีเพิ่มเทมเพลต MOGRT ลงใน AutoLab:**
 
-<img width="800" height="450" alt="Image" src="https://github.com/user-attachments/assets/22d490c5-db80-4c70-95e6-0196ec94d667" />
+<img width="800" alt="MOGRT Setup Guide" src="https://github.com/user-attachments/assets/22d490c5-db80-4c70-95e6-0196ec94d667" />
 
 ---
 
-## 🔥 ฟีเจอร์หลัก (Core Features)
+## 🔥 Core Features
 
 ### 🎯 1. Auto Frame & Sequence Builder
-เครื่องมือสร้างและจัดการ Sequence อัตโนมัติแบบครบวงจร ใช้งานง่ายเพียงแค่โหลดคลิป โปรแกรมจะจัดการกระบวนการเหล่านี้ให้ทันที:
-- **สร้าง Sequence และ Auto Resizing:** ปรับขนาดสัดส่วนของคลิปให้เหมาะสมกับแพลตฟอร์ม (เช่น แนวตั้ง 9:16, จัตุรัส 1:1, แนวนอน 16:9) พร้อมจัดวางและสเกลวิดีโอให้อัตโนมัติด้วยระบบ AI
-- **ประดับกราฟิก (Auto Frame / MOGRT):** ใส่กรอบวิดีโอหรือกราฟิกครอบทับคลิปได้ทันที 
-  > 🎨 **Custom Design Service:** หากองค์กรหรือช่องของคุณต้องการ "กรอบวิดีโอ (MOGRT)" หรือ "เทมเพลตซับไตเติ้ล" ที่เป็นเอกลักษณ์เฉพาะแบรนด์ (ต้องสร้างผ่าน After Effects) **เรารับออกแบบและสร้าง Custom MOGRT ให้พร้อมใช้งานกับ AutoLab ทันที!** (ติดต่อสอบถามได้ที่ Discord)
-- **ระบบ Auto Text:** ดึงข้อความ พาดหัว หรือแคปชั่น ไปฝังลงในวิดีโอและกราฟิกให้โดยอัตโนมัติ
-- **Smart Auto-Cut:** สำหรับตัดคลิปข่าว ระบบวิเคราะห์เพื่อตัดหัว-ท้ายคลิปที่ไม่จำเป็นทิ้ง หรือวิเคราะห์เพื่อข้ามช่วงที่ไม่ต้องการ (เช่น ช่วงผู้ประกาศข่าว) แบบอัตโนมัติ
-- **Batch Processing:** สามารถจัดการคลิปวิดีโอได้ทีละหลายๆ ไฟล์ในคราวเดียว ประหยัดเวลาการทำงานซ้ำๆ ไปได้มหาศาล แยก bin ได้อิสระ และเซฟเข้า bin ที่ต้องการได้
-- **AI autoname:** ให้ ai ตั้งชื่อคลิปให้จากโดยอิงจากชื่อไฟล์เดิม แล้วส่งไปให้ ai วิเคราะห์เนื้อหา เพื่อเอามาใช้สำหรับการพาดหัวคลิปในระบบ Auto Text ต่อได้ทันที
+
+เครื่องมือสร้างและจัดการ Sequence อัตโนมัติแบบครบวงจร — โหลดคลิป แล้วให้ AutoLab จัดการส่วนที่เหลือให้ทันที
+
+| ฟีเจอร์ | รายละเอียด |
+|---|---|
+| 📐 **Auto Resizing** | ปรับขนาดสัดส่วนให้เหมาะกับแพลตฟอร์ม (9:16 / 1:1 / 16:9) พร้อม Scale & Position อัตโนมัติด้วย AI |
+| 🖼️ **Auto Frame / MOGRT** | ใส่กรอบวิดีโอหรือกราฟิกครอบทับคลิปได้ทันที ในหลายรูปแบบ |
+| ✍️ **Auto Text** | ดึงข้อความ พาดหัว หรือแคปชั่น ฝังลงในวิดีโอและกราฟิกอัตโนมัติ |
+| ✂️ **Smart Auto-Cut** | วิเคราะห์และตัดส่วนหัว-ท้ายที่ไม่ต้องการออก หรือข้ามช่วงที่กำหนดอัตโนมัติ |
+| 📦 **Batch Processing** | จัดการหลายคลิปในคราวเดียว แยก Bin ได้อิสระ |
+| 🤖 **AI Autoname** | AI ตั้งชื่อคลิปจากชื่อไฟล์ + วิเคราะห์เนื้อหา เพื่อนำไปใช้กับ Auto Text ต่อทันที |
+| 🎁 **Starter Pack MOGRTs** | มี MOGRT สำเร็จรูปให้ทดลองใช้งานได้ทันทีหลังติดตั้ง ไม่ต้องรอออกแบบเอง |
+
+> 🎨 **Custom Design Service:** ต้องการ MOGRT กรอบวิดีโอหรือเทมเพลตซับไตเติ้ลแบบ Custom สำหรับองค์กรของคุณ? **เรารับออกแบบและสร้าง Custom MOGRT พร้อมใช้งานกับ AutoLab ทันที!** (ติดต่อสอบถามที่ Discord)
 
 https://github.com/user-attachments/assets/2ddafe61-7972-4381-8144-fd1a38dacaf9
 
+---
+
 ### ✨ 2. Auto Highlights
-ค้นหาส่วนที่น่าสนใจที่สุดของคลิปยาว และสกัดออกมาเป็นคลิปสั้น (Highlights) อัตโนมัติ  1-40 ช็อดแล้วแต่กำหนด
-- วิเคราะห์เสียงและบริบทของเนื้อหาภายในคลิป
-- ตั้งชื่อคลิปให้อัตโนมัติตามเนื้อหาที่คัดออกมา (อาจไม่แม่นมากนักเรื่องชื่อคลิป แต่ประหยัดเวลาได้เยอะมาก)
-- คัดกรองและเลือกช่วงเวลาที่ดีที่สุด จากนั้นนำมาสร้างเป็น Sub-sequence ใหม่ให้พร้อมนำไปปรับแต่งและเรนเดอร์ต่อทันที
-- ทำงานร่วมกันกับ ai Auto Frame ได้ดีมาก
+
+ค้นหาส่วนที่น่าสนใจที่สุดของคลิปยาว แล้วสกัดออกมาเป็น Highlight Clips อัตโนมัติ (1–xx ช็อต) ตามแต่จะเลือก
+
+- 🔊 **วิเคราะห์เสียงและบริบท** ของเนื้อหาภายในคลิปอัตโนมัติ
+- 🏷️ **ตั้งชื่อคลิปอัตโนมัติ** ตามเนื้อหาที่คัดออกมา และแบ่งเป็นซีเคว้นแยกให้ ประหยัดเวลาได้มหาศาล
+- 🎬 **สร้าง Sub-sequence** พร้อมนำไปปรับแต่งและ Render ต่อทันที
+- 🤝 **ทำงานร่วมกับ Auto Frame ได้อย่างไร้รอยต่อ** — Highlight เสร็จ ใส่กรอบต่อได้เลย
 
 https://github.com/user-attachments/assets/fec57da9-1189-4317-818b-5a0d083d7692
 
-### ✂️ 3. Auto Jump Cut (Turbo Mode)
-ไม่ต้องมานั่งซูมไทม์ไลน์เพื่อตัดเสียงเงียบอีกต่อไป
-- ระบบวิเคราะห์ Waveform ระดับความดังของเสียง เพื่อค้นหาและตัดช่วงที่ไม่มีการพูด (Dead Air) ออกทั้งหมดแบบอัตโนมัติ
-- ภาพและเสียงลื่นไหล ไม่กระตุก Sync ตรงกันสมบูรณ์แบบ ทำงานด้วยความเร็วสูง
+<br/>
 
-https://github.com/user-attachments/assets/a118fc60-8ce4-430b-bd1b-752daacdd82f
+> 💡 **Workflow สุดเทพ:** Auto Highlights สร้าง Sub-sequence ให้ → จากนั้น Auto Frame ใส่กรอบ MOGRT ลง Sequence เดิมนั้นได้เลยทันที ไม่ต้องเริ่มใหม่จากศูนย์
 
-#### ฟังก์ชันเสริมการตัด (Sub-features)
-| ✂️ In-to-Out Cut | ✂️ Mark In-to-Out |
-| :---: | :---: |
-| <img width="400" height="225" alt="Image" src="https://github.com/user-attachments/assets/3bdeb629-437b-46eb-850f-d3056ab38966" /> | <img width="400" height="225" alt="Image" src="https://github.com/user-attachments/assets/2a17012e-c8df-4a49-b172-4e8530a0e386" /> |
-| เลือกลบคลิปเฉพาะช่วงเวลา In-Out | ตัดแล้วมาร์คจุดเริ่มต้น-สิ้นสุดให้อัตโนมัติ |
+https://github.com/user-attachments/assets/03dec42c-a6c0-4ce5-b202-3c08fdec3f19
 
-### 💬 4. AI Captions & Subtitles
-ระบบสร้างและฝังซับไตเติ้ลลงในวิดีโออย่างชาญฉลาดและรวดเร็ว
-- **Adobe Subtitle Track:** แปลงเสียงพูดเป็นข้อความและ Export เข้าไปวางบน Subtitle Track ของ Premiere Pro ให้โดยอัตโนมัติ (SRT) สามารถ export ออกไปใช้ในโปรแกรมอื่นได้
-- **MOGRT Ready:** รองรับการทำงานร่วมกับเทมเพลต MOGRT เพื่อทำซับไตเติ้ลแอนิเมชันสวยๆ โยนเทมเพลตใส่ปุ๊บ ข้อความเด้งเข้าจังหวะทันที (กำลังพัฒนาเทมเพลตสำหรับ AutoLab โดยเฉพาะอยู่!)
-- รองรับหลากหลายภาษา และสามารถตั้งค่าจำกัดจำนวนตัวอักษรต่อบรรทัด หรือตั้งให้ขึ้นเป็นบรรทัดคู่/บรรทัดเดี่ยวได้
-
-https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
-
-### 🚀 5. Viral Headline Refiner
-มีคลิปพร้อมแล้วแต่คิดพาดหัวให้น่าสนใจไม่ออก? 
-- ฟีเจอร์ผู้ช่วยขัดเกลาพาดหัวคลิป (Titles/Headlines) ให้มีความน่าสนใจ ดึงดูดสายตา โดยเฉพาะอย่างยิ่งสำหรับคลิปวิดีโอสำหรับ TikTok และสำหรับทำข่าว
-- จำกัดและควบแน่นเนื้อหาให้อยู่ในความยาวตัวอักษรที่เหมาะสมกับการโพสต์โซเชียลมีเดีย ช่วยเพิ่มโอกาสในการเป็นไวรัล
-- Ai director chat สามารถสั่งให้ ai แก้ชื่อพาดหัวคลิปได้อิสระ ตามต้องการ 
-
-<img width="800" height="450" alt="Image" src="https://github.com/user-attachments/assets/024593c4-b8dd-4bf7-a240-3e2a9351e3ec" />
+<!-- 
+  👆 วิธีเพิ่มวิดีโอ Demo "Auto frame - Sequence Update Mogrt":
+  1. ไปที่ Issues ของ repo นี้ แล้วสร้าง Issue ใหม่
+  2. ลาก-วางไฟล์ DEMO Auto frame- Sequence Update Mogrt.mp4 ลงในช่อง Comment
+  3. รอให้ GitHub อัปโหลด แล้วก็อป URL ที่ได้ (เช่น https://github.com/user-attachments/assets/xxx)
+  4. แทนที่ REPLACE_WITH_YOUR_ASSET_ID_AFTER_UPLOAD ด้วย URL นั้น แล้วลบ comment นี้ออก
+-->
 
 ---
 
-## 🛠 การติดตั้ง (Installation)
+### ✂️ 3. Auto Jump Cut (Turbo Mode)
 
-1. ดาวน์โหลดไฟล์ติดตั้งจากหน้า [Releases](../../releases)
-   - **Windows:** โหลดไฟล์ `AutoLab_Setup.exe` แล้วรันเพื่อติดตั้งได้อัตโนมัติ
-   - **Mac:** โหลดไฟล์ `AutoLab_Mac_Beta.zip` (ยังไม่เสถียรเท่าเวอร์ชัน Windows ในเรื่องการติดตั้ง อาจติดปัญหาเรื่องการอนุญาตให้รันโปรแกรมบน Mac)
-2. เปิด Adobe Premiere Pro ไปที่เมนู `Window` > `Extensions` > `AutoLab`
-3. ล็อกอินเข้าสู่ระบบ (ระบบจะทำการผูก Device ID ของเครื่องเพื่อความปลอดภัย)
-4. เริ่มใช้งานได้ทันที!
+ไม่ต้องนั่งซูมไทม์ไลน์เพื่อตัดเสียงเงียบอีกต่อไป
+
+- 🎚️ **วิเคราะห์ Waveform** ค้นหาและตัดช่วง Dead Air ออกทั้งหมดอัตโนมัติ
+- ⚡ **ภาพและเสียงลื่นไหล** Sync สมบูรณ์แบบ ทำงานด้วยความเร็วสูง
+
+https://github.com/user-attachments/assets/a118fc60-8ce4-430b-bd1b-752daacdd82f
+
+#### ฟังก์ชันเสริมการตัด
+
+| ✂️ In-to-Out Cut | ✂️ Mark In-to-Out |
+|:---:|:---:|
+| <img width="400" height="225" alt="In-to-Out Cut" src="https://github.com/user-attachments/assets/3bdeb629-437b-46eb-850f-d3056ab38966" /> | <img width="400" height="225" alt="Mark In-to-Out" src="https://github.com/user-attachments/assets/2a17012e-c8df-4a49-b172-4e8530a0e386" /> |
+| เลือกลบคลิปเฉพาะช่วงเวลา In–Out | ตัดแล้วมาร์คจุดเริ่มต้น–สิ้นสุดให้อัตโนมัติ |
+
+---
+
+### 💬 4. AI Captions & Subtitles
+
+ระบบสร้างและฝังซับไตเติ้ลลงในวิดีโออย่างชาญฉลาดและรวดเร็ว
+
+- 📝 **Adobe Subtitle Track:** แปลงเสียงพูดเป็นข้อความ Export เข้า Subtitle Track ของ Premiere Pro (SRT) พร้อม Export ออกใช้ในโปรแกรมอื่นได้
+- ✨ **MOGRT Ready:** รองรับเทมเพลต MOGRT เพื่อทำซับไตเติ้ลแอนิเมชันสวยๆ — ใส่เทมเพลตปุ๊บ ข้อความเด้งเข้าจังหวะทันที
+- 🌐 **หลากหลายภาษา** ตั้งค่าจำกัดตัวอักษรต่อบรรทัด หรือเลือก Single/Double-line ได้
+
+https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
+
+---
+
+### 🚀 5. Viral Headline Refiner
+
+มีคลิปพร้อมแล้วแต่คิดพาดหัวให้น่าสนใจไม่ออก?
+
+- ✍️ **ขัดเกลาพาดหัวคลิป** ให้น่าสนใจและดึงดูดสายตา โดยเฉพาะ TikTok และข่าว
+- 📏 **จำกัดและควบแน่นเนื้อหา** ให้อยู่ในความยาวที่เหมาะสมกับการโพสต์โซเชียล เพิ่มโอกาสไวรัล
+- 💬 **AI Director Chat:** สั่งให้ AI แก้ชื่อพาดหัวได้อิสระตามต้องการ
+
+<img width="800" alt="Viral Headline Refiner" src="https://github.com/user-attachments/assets/024593c4-b8dd-4bf7-a240-3e2a9351e3ec" />
+
+---
+
+## 🛠 Installation
+
+**Windows**
+1. ดาวน์โหลดไฟล์ `AutoLab_Setup.exe` จากหน้า [**Releases**](../../releases/latest)
+2. รันไฟล์ติดตั้ง — ระบบจัดการทุกอย่างให้อัตโนมัติ
+3. เปิด Adobe Premiere Pro → เมนู `Window` > `Extensions` > `AutoLab`
+4. ล็อกอินเข้าสู่ระบบ (ระบบผูก Device ID เพื่อความปลอดภัย)
+5. **พร้อมใช้งาน!** 🎉
+
+**macOS (Beta)**
+- ดาวน์โหลดไฟล์ `AutoLab_Mac_Beta.zip`
+- ⚠️ ยังไม่เสถียรเท่าเวอร์ชัน Windows อาจพบปัญหาเรื่องสิทธิ์การรันโปรแกรม
 
 ---
 
 ## 🔒 Security & Performance
-- **Device Binding:** ระบบรักษาความปลอดภัยด้วยการผูก Device ID และตรวจจับการใช้งานเพื่อป้องกันการนำไปใช้งานผิดประเภท
-- **Premium UI/UX:** อินเทอร์เฟซผู้ใช้ที่ออกแบบมาให้ดูทันสมัย สะอาดตา และใช้งานง่ายแม้จะมีฟังก์ชันซับซ้อนก็ตาม
+
+- 🔐 **Device Binding** — ระบบผูก Device ID ตรวจจับการใช้งานผิดประเภท ปกป้องผู้ใช้ทุกคน
+- 🎨 **Premium UI/UX** — อินเทอร์เฟซออกแบบมาให้ทันสมัย สะอาดตา และใช้งานง่ายแม้มีฟังก์ชันซับซ้อน
 
 ---
 
-## 💬 ติดต่อ & Support
+## 💬 Support
 
-หากพบปัญหาการใช้งาน มีข้อเสนอแนะ หรือต้องการสอบถามรายละเอียดเพิ่มเติม สามารถติดต่อเราได้ที่:
+หากพบปัญหา มีข้อเสนอแนะ หรือต้องการสอบถามรายละเอียดเพิ่มเติม:
 
-- 👾 **Discord Community & Support:** [คลิกที่นี่เพื่อเข้าร่วม Discord](https://discord.com/invite/FXtK7j9E7C)
-
+[![Discord](https://img.shields.io/badge/👾%20Join%20our%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FXtK7j9E7C)
 
 ---
 
