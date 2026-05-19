@@ -23,6 +23,7 @@
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
       <a href="#install">Installation</a>
       <a href="#support">Support</a>
     </div>
@@ -339,6 +340,70 @@
       alt="MOGRT Setup Guide" />
   </div>
 
+  <!-- ─── PRICING ─── -->
+  <section id="pricing" class="pricing">
+    <div class="container fade-in">
+      <div class="section-header">
+        <p class="section-label">Pricing Plans</p>
+        <h2 class="section-title">💎 อัปเกรดเพื่อประสิทธิภาพการตัดต่อระดับโปร</h2>
+        <p class="section-desc">เริ่มต้นทดลองใช้ฟรี 14 วัน ยกเลิกเมื่อไหร่ก็ได้ ไม่มีข้อผูกมัด</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Card 1: Free Trial -->
+        <div class="price-card">
+          <div class="price-header">
+            <h3 class="price-tier">Free Trial</h3>
+            <div class="price-amount">
+              <span class="currency">฿</span><span class="amount">0</span>
+              <span class="period">/ 14 วัน</span>
+            </div>
+            <p class="price-desc">ทดลองฟีเจอร์ระดับโปรทุกอย่างฟรีเต็มที่ ไม่ต้องผูกมัดใดๆ</p>
+          </div>
+          <ul class="price-features">
+            <li><span class="icon">✓</span> AI Auto Frame — สร้าง Sequence ทุกไซส์ (9:16, 1:1, 16:9) ใส่กราฟิก MOGRT +
+              Auto Text อัตโนมัติ</li>
+            <li><span class="icon">✓</span> Auto Highlights — หั่นคลิปยาวเป็นช็อตเด็ดไวรัล ตั้งจำนวนได้อิสระ
+              ตั้งชื่อช็อตอัตโนมัติ</li>
+            <li><span class="icon">✓</span> Auto Jump Cut — ตัด Dead Air จาก Waveform อัตโนมัติ ภาพ-เสียง Sync สมบูรณ์
+            </li>
+            <li><span class="icon">✓</span> AI Captions — แปลงเสียงเป็นซับ SRT หลายภาษา ฝัง MOGRT ได้
+              ตั้งตัวอักษรต่อบรรทัดได้</li>
+            <li><span class="icon">✓</span> Viral Headline Refiner — AI ขัดพาดหัวให้น่าคลิก เหมาะ TikTok &amp; ข่าว</li>
+          </ul>
+          <a href="#install" class="price-btn">เริ่มทดลองใช้ฟรี</a>
+        </div>
+
+        <!-- Card 2: Pro Plan (Recommended) -->
+        <div class="price-card popular">
+          <div class="popular-badge">🔥 แนะนำที่สุด</div>
+          <div class="price-header">
+            <h3 class="price-tier">Pro Plan</h3>
+            <div class="price-amount">
+              <span class="currency">฿</span><span class="amount">399</span>
+              <span class="period">/ เดือน</span>
+            </div>
+            <p class="price-desc">ปลดล็อกความเร็วในการสร้างผลงาน สำหรับนักตัดต่อและครีเอเตอร์มืออาชีพ</p>
+          </div>
+          <ul class="price-features">
+            <li><span class="icon">✓</span> <strong>ใช้งานทุกฟีเจอร์ได้ไม่จำกัด</strong></li>
+            <li><span class="icon">✓</span> AI Auto Frame + Batch — ประมวลผลหลายไฟล์พร้อมกัน จัด Bin อัตโนมัติ ใส่กรอบ
+              MOGRT พร้อม Auto Text ในคลิกเดียว</li>
+            <li><span class="icon">✓</span> Auto Jump Cut — ตัด Dead Air จาก Waveform อัตโนมัติ ภาพ-เสียง Sync สมบูรณ์
+            </li>
+            <li><span class="icon">✓</span> AI Autoname — ให้ AI ตั้งชื่อคลิปจากเนื้อหา ส่งเข้าระบบ Auto Text
+              ต่อพร้อมทันที</li>
+            <li><span class="icon">✓</span> AI Captions + MOGRT — ซับแอนิเมชัน ตั้งจำนวนตัวอักษร/บรรทัด เดี่ยว-คู่ได้
+            </li>
+            <li><span class="icon">✓</span> AI Director Chat — สั่ง AI แก้พาดหัวคลิปได้อิสระแบบ Freeform ไม่มีกรอบ</li>
+            <li><span class="icon">✓</span> อัปเดตฟีเจอร์ใหม่ฟรีตลอด + Priority Support</li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openContactModal()" class="price-btn highlight">ติดต่อ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── INSTALL ─── -->
   <section id="install" class="install">
     <div class="container">
@@ -460,7 +525,58 @@
       video.removeAttribute('autoplay'); // Remove default autoplay so it doesn't play all at once
       videoObserver.observe(video);
     });
+
+    // Modal functions
+    function openContactModal() {
+      const modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Stop background scrolling
+      }
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore background scrolling
+      }
+    }
+
+    // Close modal on click outside of content
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('contact-modal');
+      if (e.target === modal) {
+        closeContactModal();
+      }
+    });
   </script>
+
+  <!-- ─── CONTACT MODAL ─── -->
+  <div id="contact-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeContactModal()">&times;</button>
+      <h3 class="modal-title">💬 ช่องทางการติดต่อ</h3>
+      <p class="modal-desc">ทักแชทเพื่อสั่งซื้อ หรือสอบถามข้อมูลเพิ่มเติมเกี่ยวกับ Pro Plan ได้เลยครับ!</p>
+
+      <div class="modal-options">
+        <a href="https://www.facebook.com/messages/t/9986269261396146" target="_blank" class="modal-option-btn fb-btn">
+          <span class="icon">🔵</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Facebook Messenger</span>
+            <span class="btn-subtitle">ติดต่อเฟซโดยตรง</span>
+          </div>
+        </a>
+        <a href="https://discord.com/invite/FXtK7j9E7C" target="_blank" class="modal-option-btn discord-btn">
+          <span class="icon">👾</span>
+          <div class="btn-text-wrap">
+            <span class="btn-title">Discord Server</span>
+            <span class="btn-subtitle">เข้าร่วมดิสคอร์ดเซิร์ฟเวอร์</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
