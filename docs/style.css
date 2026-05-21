@@ -404,3 +404,75 @@ footer span{background:linear-gradient(135deg,var(--purple),var(--pink));-webkit
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(88, 101, 242, 0.2);
 }
+
+/* ─── TECHNICAL DEMO & FAIR USE DISCLAIMER ─── */
+.demo-disclaimer-section {
+  padding: 3.5rem 2rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+.disclaimer-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.2rem;
+  background: rgba(20, 20, 35, 0.45);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  position: relative;
+}
+.disclaimer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--purple), var(--pink));
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+.disclaimer-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.disclaimer-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+.disclaimer-contact {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+  border-top: 1px dashed rgba(155, 93, 229, 0.15);
+  padding-top: 1.2rem;
+}
+.disclaimer-contact a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.disclaimer-contact a:hover {
+  color: var(--pink);
+  text-decoration: underline;
+}
+@media(max-width: 768px) {
+  .demo-disclaimer-section {
+    padding: 2.5rem 1rem;
+  }
+  .disclaimer-card {
+    padding: 1.5rem;
+  }
+}
+
