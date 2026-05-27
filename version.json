@@ -1,10 +1,14 @@
 {
-    "version": "1.4.8",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.8/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.8/AutoLab_Mac_Beta.zip",
+    "version": "1.4.9",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.9/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.9/AutoLab_Mac_Beta.zip",
     "starter_pack_url": "",
     "starter_pack_version": "1.0",
     "notes": [
+        "★ AutoLab Hotfix (v1.4.9)",
+        "✦ GEMINI 3.1 FLASH-LITE UPGRADE",
+        "  • [HOTFIX] อัปเกรดโมเดล Gemini 3.1 Flash-Lite รุ่น GA ทดแทนรุ่น Preview",
+        "",
         "★ AutoLab Hotfix (v1.4.8)",
         "✦ STARTER PACK HOTFIXES",
         "  • [HOTFIX] แก้บั๊กเทมเพลต Starter Pack",
