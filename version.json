@@ -1,7 +1,7 @@
 {
-    "version": "1.4.9",
-    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.9/AutoLab_Setup.exe",
-    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.9/AutoLab_Mac_Beta.zip",
+    "version": "1.4.8",
+    "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.8/AutoLab_Setup.exe",
+    "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL1.4.8/AutoLab_Mac_Beta.zip",
     "starter_pack_url": "",
     "starter_pack_version": "1.0",
     "notes": [
