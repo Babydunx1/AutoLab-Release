@@ -8,7 +8,7 @@
 ด้วยระบบอัตโนมัติที่ออกแบบมาเพื่อคนทำคอนเทนต์โดยเฉพาะ
 
 [![Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-CC%202022+-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)](#)
-[![Version](https://img.shields.io/badge/Version-1.4.4-FF5500?style=for-the-badge&logo=github&logoColor=white)](#)
+[![Version](https://img.shields.io/badge/Version-1.8.0-FF5500?style=for-the-badge&logo=github&logoColor=white)](#)
 [![Platform](https://img.shields.io/badge/Windows%20%7C%20macOS-Supported-0A84FF?style=for-the-badge&logo=windows&logoColor=white)](#)
 [![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FXtK7j9E7C)
 
