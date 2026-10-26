@@ -144,6 +144,9 @@ function uploadAsset(uploadUrlTemplate, filePath, token) {
 
 async function main() {
     const isUploadRequested = process.argv.includes('--upload') || process.argv.includes('--apply');
+    const isPrerelease = process.argv.includes('--prerelease') || process.argv.includes('--pre');
+    const verArgIdx = process.argv.indexOf('--version');
+    const cliVersion = (verArgIdx !== -1 && process.argv[verArgIdx + 1]) ? process.argv[verArgIdx + 1] : null;
 
     // Load version info
     if (!fs.existsSync(vJsonPath)) {
@@ -151,11 +154,11 @@ async function main() {
         process.exit(1);
     }
     const vData = JSON.parse(fs.readFileSync(vJsonPath, 'utf8'));
-    const version = vData.version;
+    const version = cliVersion || vData.version;
     const tagName = `updateAL${version}`;
     const releaseTitle = `update${version}`;
 
-    console.log(`📦 Release Version : ${ANSI.green}${ANSI.bold}v${version}${ANSI.reset}`);
+    console.log(`📦 Release Version : ${ANSI.green}${ANSI.bold}v${version}${ANSI.reset} ${isPrerelease ? `${ANSI.yellow}[PRE-RELEASE / NOT LATEST]${ANSI.reset}` : `${ANSI.neonGreen}[LATEST]${ANSI.reset}`}`);
     console.log(`🏷️  Target Tag Name : ${ANSI.cyan}${ANSI.bold}${tagName}${ANSI.reset}`);
     console.log(`📋 Release Title   : ${ANSI.white}${ANSI.bold}${releaseTitle}${ANSI.reset}\n`);
 
@@ -188,12 +191,12 @@ async function main() {
     console.log(`\n🔑 GitHub Auth     : ${ANSI.green}Authenticated (Token auto-acquired from Git Credential Manager)${ANSI.reset}`);
 
     // 1. Prepare Notes in beautiful GitHub Markdown
-    function buildReleaseMarkdown(data, withMac) {
+    function buildReleaseMarkdown(data, targetVer, withMac) {
         const rawNotes = Array.isArray(data.notes) ? data.notes : [];
         const curNotes = [];
         let started = false;
         for (const line of rawNotes) {
-            if (line.includes(`(${data.version})`) || line.includes(`(v${data.version})`)) {
+            if (line.includes(`(${targetVer})`) || line.includes(`(v${targetVer})`)) {
                 started = true;
                 curNotes.push(line);
                 continue;
@@ -223,7 +226,7 @@ async function main() {
         return `${bodyLines}\n\n---\n### 📦 Attached Assets\n- **Windows:** \`AutoLab_Setup.exe\`\n${withMac ? '- **macOS:** `AutoLab_Mac_Beta.zip`\n' : ''}`;
     }
 
-    const notesText = buildReleaseMarkdown(vData, hasMac);
+    const notesText = buildReleaseMarkdown(vData, version, hasMac);
 
     if (!isUploadRequested) {
         console.log(`\n${ANSI.yellow}📝 ตัวอย่างข้อความที่จะถูกเขียนลง GitHub Release "Describe this release" ให้อัตโนมัติ:${ANSI.reset}`);
@@ -255,19 +258,19 @@ async function main() {
             name: releaseTitle,
             body: notesText,
             draft: false,
-            prerelease: false,
-            make_latest: "true"
+            prerelease: isPrerelease,
+            make_latest: isPrerelease ? "false" : "true"
         }, token);
     } else {
-        console.log(`   ✨ กำลังสร้าง Release '${releaseTitle}' บน GitHub...`);
+        console.log(`   ✨ กำลังสร้าง Release '${releaseTitle}' บน GitHub (${isPrerelease ? 'Pre-release' : 'Latest'})...`);
         const payload = {
             tag_name: tagName,
             target_commitish: 'main',
             name: releaseTitle,
             body: notesText,
             draft: false,
-            prerelease: false,
-            make_latest: "true"
+            prerelease: isPrerelease,
+            make_latest: isPrerelease ? "false" : "true"
         };
         releaseObj = await githubApiRequest('POST', `/repos/${REPO_OWNER}/${REPO_NAME}/releases`, payload, token);
         console.log(`   ${ANSI.green}✅ สร้าง Release สำเร็จ! (ID: ${releaseObj.id})${ANSI.reset}`);
