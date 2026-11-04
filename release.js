@@ -18,11 +18,65 @@ const ANSI = {
 
 const repoDir = __dirname;
 const extDir = 'G:\\Dev\\Extension-Premiere-Pro';
+const srcVersionJsonPath = path.join(extDir, 'AutoLab', 'version.json');
+const srcReleaseNotesPath = path.join(extDir, 'AutoLab', 'release_notes.txt');
 const vJsonPath = path.join(repoDir, 'version.json');
+const readmePath = path.join(repoDir, 'README.md');
+const docsIndexPath = path.join(repoDir, 'docs', 'index.html');
 const winExePath = path.join(extDir, 'AutoLab', 'Output', 'AutoLab_Setup.exe');
 const macZipPath = path.join(extDir, 'AutoLab_Mac_Beta.zip');
 const REPO_OWNER = 'Babydunx1';
 const REPO_NAME = 'AutoLab-Release';
+
+function syncMetadataFromSource(overrideVersion) {
+    if (fs.existsSync(srcVersionJsonPath)) {
+        const srcData = JSON.parse(fs.readFileSync(srcVersionJsonPath, 'utf8'));
+        const targetVer = overrideVersion || srcData.version;
+        srcData.version = targetVer;
+
+        // If AutoLab/release_notes.txt exists and starts with ★ ... (vX.Y.Z), sync top release block into version.json notes
+        if (fs.existsSync(srcReleaseNotesPath)) {
+            const rawTxt = fs.readFileSync(srcReleaseNotesPath, 'utf8').replace(/\r\n/g, '\n');
+            const txtLines = rawTxt.split('\n');
+            const topBlock = [];
+            let inTop = false;
+            for (const line of txtLines) {
+                if (!inTop && (line.includes(`(${targetVer})`) || line.includes(`(v${targetVer})`))) {
+                    inTop = true;
+                    topBlock.push(line);
+                    continue;
+                }
+                if (inTop) {
+                    if (line.startsWith('★')) break;
+                    topBlock.push(line);
+                }
+            }
+            if (topBlock.length > 0 && Array.isArray(srcData.notes)) {
+                // Replace or prepend the targetVer block in srcData.notes
+                const restIdx = srcData.notes.findIndex((l, idx) => idx > 0 && l.startsWith('★') && !l.includes(targetVer));
+                const firstHasTarget = srcData.notes[0] && srcData.notes[0].includes(targetVer);
+                const tailNotes = firstHasTarget
+                    ? (restIdx !== -1 ? srcData.notes.slice(restIdx) : [])
+                    : srcData.notes;
+                srcData.notes = [...topBlock, ...tailNotes];
+                fs.writeFileSync(srcVersionJsonPath, JSON.stringify(srcData, null, 2) + '\n', 'utf8');
+            }
+        }
+
+        fs.writeFileSync(vJsonPath, JSON.stringify(srcData, null, 2) + '\n', 'utf8');
+
+        [readmePath, docsIndexPath].forEach(fPath => {
+            if (!fs.existsSync(fPath)) return;
+            const prev = fs.readFileSync(fPath, 'utf8');
+            const next = prev
+                .replace(/Version-\d+\.\d+\.\d+-FF5500/g, `Version-${targetVer}-FF5500`)
+                .replace(/VERSION%20\(v\d+\.\d+\.\d+\)/g, `VERSION%20(v${targetVer})`)
+                .replace(/Releases \(v\d+\.\d+\.\d+ Latest\)/g, `Releases (v${targetVer} Latest)`)
+                .replace(/🏷 v\d+\.\d+\.\d+/g, `🏷 v${targetVer}`);
+            if (next !== prev) fs.writeFileSync(fPath, next, 'utf8');
+        });
+    }
+}
 
 console.log(`${ANSI.cyan}${ANSI.bold}╔══════════════════════════════════════════════════════════════════════╗${ANSI.reset}`);
 console.log(`${ANSI.cyan}${ANSI.bold}║           🚀 AutoLab Official Release Dispatcher Suite               ║${ANSI.reset}`);
@@ -148,6 +202,9 @@ async function main() {
     const verArgIdx = process.argv.indexOf('--version');
     const cliVersion = (verArgIdx !== -1 && process.argv[verArgIdx + 1]) ? process.argv[verArgIdx + 1] : null;
 
+    // Auto-sync version.json, README.md, and docs/index.html from Extension-Premiere-Pro
+    syncMetadataFromSource(cliVersion);
+
     // Load version info
     if (!fs.existsSync(vJsonPath)) {
         console.error(`${ANSI.red}❌ version.json not found in ${repoDir}${ANSI.reset}`);
@@ -241,6 +298,20 @@ async function main() {
 
     // --- UPLOAD FLOW ---
     console.log(`\n${ANSI.cyan}🚀 เริ่มต้นกระบวนการสร้าง Release และอัปโหลดไฟล์...${ANSI.reset}`);
+
+    // 1.5 Auto-commit & push metadata changes to AutoLab-Release (main)
+    try {
+        const statusOut = execSync('git status --porcelain README.md docs/index.html version.json', { cwd: repoDir, encoding: 'utf8' }).trim();
+        if (statusOut) {
+            console.log(`   📝 Committing & pushing v${version} metadata to ${REPO_OWNER}/${REPO_NAME} (main)...`);
+            execSync('git add README.md docs/index.html version.json', { cwd: repoDir, stdio: 'inherit' });
+            execSync(`git commit -m "chore(release): bump AutoLab to v${version}"`, { cwd: repoDir, stdio: 'inherit' });
+            execSync('git push origin main', { cwd: repoDir, stdio: 'inherit' });
+            console.log(`   ${ANSI.green}✅ Pushed v${version} metadata to main!${ANSI.reset}`);
+        }
+    } catch (gitErr) {
+        console.warn(`   ${ANSI.yellow}⚠️ Git sync note: ${gitErr.message}${ANSI.reset}`);
+    }
 
     // 2. Check if release already exists
     let existingRelease = null;
