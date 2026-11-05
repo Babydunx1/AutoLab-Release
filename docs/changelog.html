@@ -39,7 +39,7 @@
     }
 
     .cl-hero-inner {
-      max-width: 1020px;
+      max-width: 1220px;
       margin: 0 auto;
     }
 
@@ -202,20 +202,96 @@
       border-color: #f8fafc;
     }
 
-    /* ─── EDITORIAL FEED (LINEAR / CURSOR 2-COLUMN SPLIT) ─── */
+    /* ─── EDITORIAL FEED + RIGHT "ในหน้านี้" SIDEBAR ─── */
     .cl-container {
-      max-width: 1020px;
+      max-width: 1220px;
       margin: 0 auto;
       padding: 1rem 2rem 6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 170px;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 1040px) {
+      .cl-container {
+        grid-template-columns: 1fr;
+      }
+      .cl-toc-aside {
+        display: none;
+      }
+    }
+
+    .cl-toc-aside {
+      position: sticky;
+      top: 96px;
+      padding-top: 2.2rem;
+      user-select: none;
+    }
+
+    .cl-toc-heading {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 0.75rem;
+      padding-left: 14px;
+      letter-spacing: 0.01em;
+    }
+
+    .cl-toc-list {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid rgba(255, 255, 255, 0.09);
+      max-height: calc(100vh - 160px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+    }
+
+    .cl-toc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .cl-toc-list::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .cl-toc-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 4px;
+    }
+
+    .cl-toc-link {
+      display: block;
+      padding: 6px 10px 6px 14px;
+      margin-left: -1px;
+      border-left: 2px solid transparent;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .cl-toc-link:hover {
+      color: #f8fafc;
+    }
+
+    .cl-toc-link.active {
+      color: #60a5fa;
+      font-weight: 600;
+      border-left-color: #60a5fa;
     }
 
     .cl-entry {
       display: grid;
-      grid-template-columns: 230px 1fr;
-      gap: 3rem;
+      grid-template-columns: 200px 1fr;
+      gap: 2.5rem;
       padding: 3.2rem 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
       position: relative;
+      scroll-margin-top: 84px;
     }
 
     .cl-entry:last-child {
@@ -542,9 +618,13 @@
     </div>
   </header>
 
-  <!-- ─── CHANGELOG STREAM ─── -->
+  <!-- ─── CHANGELOG STREAM + RIGHT TOC ─── -->
   <main class="cl-container">
     <div id="cl-feed"></div>
+    <aside class="cl-toc-aside" aria-label="ในหน้านี้">
+      <div class="cl-toc-heading">ในหน้านี้</div>
+      <div class="cl-toc-list" id="cl-toc-list"></div>
+    </aside>
   </main>
 
   <!-- ─── FOOTER ─── -->
@@ -664,6 +744,7 @@
       let searchQuery = '';
 
       const feedEl = document.getElementById('cl-feed');
+      const tocListEl = document.getElementById('cl-toc-list');
       const searchInput = document.getElementById('cl-search');
       const filtersEl = document.getElementById('cl-filters');
 
@@ -688,6 +769,7 @@
       function render() {
         const q = searchQuery.trim().toLowerCase();
         const html = [];
+        const tocHtml = [];
 
         allReleases.forEach((rel, idx) => {
           const isLatest = idx === 0;
@@ -722,7 +804,13 @@
 
           if (visibleCats.length === 0) return;
 
-          const anchorId = 'v' + rel.version.replace(/\./g, '-');
+          const anchorId = 'v' + rel.version.replace(/[^a-zA-Z0-9]+/g, '-');
+          tocHtml.push(`
+            <a href="#${anchorId}" class="cl-toc-link ${tocHtml.length === 0 ? 'active' : ''}" data-target="${anchorId}">
+              v${escapeHtml(rel.version)}
+            </a>
+          `);
+
           const summaryBadges = [];
           if (newCount > 0) summaryBadges.push(`<span class="cl-mini-stat">${newCount} new</span>`);
           if (fixCount > 0) summaryBadges.push(`<span class="cl-mini-stat">${fixCount} fixed</span>`);
@@ -786,7 +874,36 @@
         feedEl.innerHTML = html.length > 0
           ? html.join('')
           : `<div class="cl-empty">ไม่พบรายการอัปเดตที่ตรงกับ "${escapeHtml(searchQuery)}"</div>`;
+
+        if (tocListEl) {
+          tocListEl.innerHTML = tocHtml.join('');
+        }
+        syncActiveTocOnScroll();
       }
+
+      function syncActiveTocOnScroll() {
+        if (!tocListEl) return;
+        const entries = Array.from(feedEl.querySelectorAll('.cl-entry'));
+        if (entries.length === 0) return;
+
+        let activeId = entries[0].id;
+        const offsetThreshold = 150;
+        for (let i = 0; i < entries.length; i++) {
+          const rect = entries[i].getBoundingClientRect();
+          if (rect.top <= offsetThreshold) {
+            activeId = entries[i].id;
+          } else {
+            break;
+          }
+        }
+
+        tocListEl.querySelectorAll('.cl-toc-link').forEach(link => {
+          const isMatch = link.getAttribute('data-target') === activeId;
+          link.classList.toggle('active', isMatch);
+        });
+      }
+
+      window.addEventListener('scroll', syncActiveTocOnScroll, { passive: true });
 
       searchInput.addEventListener('input', e => {
         searchQuery = e.target.value || '';
