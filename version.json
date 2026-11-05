@@ -1,10 +1,16 @@
 {
-  "version": "1.8.6",
+  "version": "1.8.7",
   "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/latest/download/AutoLab_Setup.exe",
   "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/latest/download/AutoLab_Mac_Beta.zip",
   "starter_pack_url": "",
   "starter_pack_version": "1.0",
   "notes": [
+    "★ AutoLab Nanometer Auto-Scale & Anti-Logo Crop (v1.8.7)",
+    "◆ ⚡AUTO SCALE (อัปเกรดระบบคำนวณ Auto Scale ตัดขอบดำแม่นยำ ทุกรูปแบบ)",
+    "  • [FIX] บีบโซนวัดขอบดำให้อยู่เฉพาะกึ่งกลางจอแนวนอน 50% ป้องกันโลโก้เว็บหรือลายน้ำมุมในขอบดำหลอก หรือดึงตำแหน่ง PosY ไหลลง",
+    "  • [NEW] เพิ่มฟิลเตอร์ตรวจความสมมาตร คัดกรองฉากมืดกลางคืนและโฆษณาคั่นเต็มจอออกอัตโนมัติ",
+    "  • [IMPROVE] ขยายจุดสแกนขนาน 6 จุดครอบคลุมต้น-กลาง-ท้าย รองรับที่ขอบดำค่อยๆ บีบหนาขึ้นตามเวลา พร้อมชดเชยระยะ รอบจุดศูนย์กลางระดับพิกเซล",
+    "",
     "★ AutoLab Auto Highlights Master Media & Temp Sequence Guard (v1.8.6)",
     "◆ 🛡️ IRONCLAD MASTER MEDIA & SEQUENCE CLEANUP GUARD (ป้องกันไฟล์ต้นฉบับหายและกวาดลบซีเควนซ์ชั่วคราว 100%)",
     "  • [FIX] ยืนยันการลบซีเควนซ์ยาวชั่วคราวหลังจบ Auto Highlights พร้อมระบบสำรองบังคับลบและป้องกันซีเควนซ์ค้าง",
