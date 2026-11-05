@@ -1,10 +1,16 @@
 {
-  "version": "1.8.5",
+  "version": "1.8.6",
   "download_url_windows": "https://github.com/Babydunx1/AutoLab-Release/releases/latest/download/AutoLab_Setup.exe",
   "download_url_mac": "https://github.com/Babydunx1/AutoLab-Release/releases/latest/download/AutoLab_Mac_Beta.zip",
   "starter_pack_url": "",
   "starter_pack_version": "1.0",
   "notes": [
+    "★ AutoLab Auto Highlights Master Media & Temp Sequence Guard (v1.8.6)",
+    "◆ 🛡️ IRONCLAD MASTER MEDIA & SEQUENCE CLEANUP GUARD (ป้องกันไฟล์ต้นฉบับหายและกวาดลบซีเควนซ์ชั่วคราว 100%)",
+    "  • [FIX] ยืนยันการลบซีเควนซ์ยาวชั่วคราวหลังจบ Auto Highlights พร้อมระบบสำรองบังคับลบและป้องกันซีเควนซ์ค้าง",
+    "  • [FIX] ย้ายขั้นตอนช่วยชีวิตไฟล์ต้นฉบับ (Pointer Rescue) มาก่อนการลบโฟลเดอร์ XML และป้องกันการเผลอลบไฟล์แม่ที่ไทม์ไลน์ใช้งานอยู่",
+    "  • [NEW] เปิดบันทึก Execution Audit Log ลงเครื่องอัตโนมัติ (%APPDATA%\\AutoLab\\logs\\autolab_Execution.log) ทุกเครื่อง",
+    "",
     "★ AutoLab 1-Click Sequence & Name Refiner (v1.8.5)",
     "◆ 🎬 คลิกชื่อคลิปเปิดดู Sequence บนหน้าจอ Premiere ทันที",
     "  • [NEW] คลิกที่ (#1, #2) หรือชื่อคลิปในคิว Auto Frame Queue เปิดเช็ค Sequence ได้ทันที",
