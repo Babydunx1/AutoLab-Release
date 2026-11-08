@@ -8,7 +8,7 @@
 ด้วยระบบตัดต่ออัตโนมัติและ **AI Agent MCP (475+ Tools)** ที่ออกแบบมาเพื่อคนทำคอนเทนต์และทีมโปรดักชันโดยเฉพาะ
 
 [![Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-CC%202022--2026+-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)](#)
-[![Version](https://img.shields.io/badge/Version-1.8.7-FF5500?style=for-the-badge&logo=github&logoColor=white)](../../releases/latest)
+[![Version](https://img.shields.io/badge/Version-1.8.8-FF5500?style=for-the-badge&logo=github&logoColor=white)](../../releases/latest)
 [![MCP Ready](https://img.shields.io/badge/AI%20MCP%20Ready-475%2B%20Tools-00F0FF?style=for-the-badge&logo=openai&logoColor=black)](https://github.com/Qtpx0/autolab-premiere-skill)
 [![Platform](https://img.shields.io/badge/Windows%20%7C%20macOS-Supported-0A84FF?style=for-the-badge&logo=windows&logoColor=white)](#)
 [![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FXtK7j9E7C)
@@ -16,7 +16,7 @@
 <br/>
 
 <a href="../../releases/latest">
-  <img src="https://img.shields.io/badge/⬇️%20%20DOWNLOAD%20LATEST%20VERSION%20(v1.8.7)-2EA44F?style=for-the-badge" alt="Download AutoLab" />
+  <img src="https://img.shields.io/badge/⬇️%20%20DOWNLOAD%20LATEST%20VERSION%20(v1.8.8)-2EA44F?style=for-the-badge" alt="Download AutoLab" />
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/Qtpx0/autolab-premiere-skill">
@@ -158,7 +158,7 @@ https://github.com/user-attachments/assets/9dd41581-584e-4a81-9434-cd8d18244cda
 ## 🛠 Installation
 
 **Windows**
-1. ดาวน์โหลดไฟล์ `AutoLab_Setup.exe` จากหน้า [**Releases (v1.8.7 Latest)**](../../releases/latest)
+1. ดาวน์โหลดไฟล์ `AutoLab_Setup.exe` จากหน้า [**Releases (v1.8.8 Latest)**](../../releases/latest)
 2. รันไฟล์ติดตั้ง — ระบบจัดการติดตั้งปลั๊กอินและชุดเครื่องมือให้อัตโนมัติ
 3. เปิด Adobe Premiere Pro → เมนู `Window` > `Extensions` > `AutoLab`
 4. ล็อกอินเข้าสู่ระบบ (ระบบผูก Device ID เพื่อความปลอดภัย)
