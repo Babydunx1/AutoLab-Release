@@ -30,7 +30,7 @@ const macZipPath = path.join(extDir, 'AutoLab_Mac_Beta.zip');
 const REPO_OWNER = 'Babydunx1';
 const REPO_NAME = 'AutoLab-Release';
 
-function syncMetadataFromSource(overrideVersion) {
+function syncMetadataFromSource(overrideVersion, isPrerelease = false) {
     if (fs.existsSync(srcVersionJsonPath)) {
         const srcData = JSON.parse(fs.readFileSync(srcVersionJsonPath, 'utf8'));
         const targetVer = overrideVersion || srcData.version;
@@ -76,21 +76,24 @@ function syncMetadataFromSource(overrideVersion) {
             }
         }
 
-        fs.writeFileSync(vJsonPath, JSON.stringify(srcData, null, 2) + '\n', 'utf8');
+        // If NOT a prerelease, update repository's version.json and public README / landing page badges
+        if (!isPrerelease) {
+            fs.writeFileSync(vJsonPath, JSON.stringify(srcData, null, 2) + '\n', 'utf8');
 
-        [readmePath, docsIndexPath].forEach(fPath => {
-            if (!fs.existsSync(fPath)) return;
-            const prev = fs.readFileSync(fPath, 'utf8');
-            let next = prev
-                .replace(/Version-\d+\.\d+\.\d+-FF5500/g, `Version-${targetVer}-FF5500`)
-                .replace(/VERSION%20\(v\d+\.\d+\.\d+\)/g, `VERSION%20(v${targetVer})`)
-                .replace(/Releases \(v\d+\.\d+\.\d+ Latest\)/g, `Releases (v${targetVer} Latest)`)
-                .replace(/🏷 v\d+\.\d+\.\d+/g, `🏷 v${targetVer}`);
-            if (fPath === docsIndexPath && !next.includes('href="changelog.html"')) {
-                next = next.replace('<a href="#install">Installation</a>', '<a href="#install">Installation</a>\r\n      <a href="changelog.html">Changelog</a>');
-            }
-            if (next !== prev) fs.writeFileSync(fPath, next, 'utf8');
-        });
+            [readmePath, docsIndexPath].forEach(fPath => {
+                if (!fs.existsSync(fPath)) return;
+                const prev = fs.readFileSync(fPath, 'utf8');
+                let next = prev
+                    .replace(/Version-\d+\.\d+\.\d+-FF5500/g, `Version-${targetVer}-FF5500`)
+                    .replace(/VERSION%20\(v\d+\.\d+\.\d+\)/g, `VERSION%20(v${targetVer})`)
+                    .replace(/Releases \(v\d+\.\d+\.\d+ Latest\)/g, `Releases (v${targetVer} Latest)`)
+                    .replace(/🏷 v\d+\.\d+\.\d+/g, `🏷 v${targetVer}`);
+                if (fPath === docsIndexPath && !next.includes('href="changelog.html"')) {
+                    next = next.replace('<a href="#install">Installation</a>', '<a href="#install">Installation</a>\r\n      <a href="changelog.html">Changelog</a>');
+                }
+                if (next !== prev) fs.writeFileSync(fPath, next, 'utf8');
+            });
+        }
     }
 }
 
@@ -220,14 +223,10 @@ async function main() {
     const cliVersion = (verArgIdx !== -1 && process.argv[verArgIdx + 1]) ? process.argv[verArgIdx + 1] : null;
 
     // Auto-sync version.json, README.md, and docs/index.html from Extension-Premiere-Pro
-    syncMetadataFromSource(cliVersion);
+    syncMetadataFromSource(cliVersion, isPrerelease);
 
     // Load version info
-    if (!fs.existsSync(vJsonPath)) {
-        console.error(`${ANSI.red}❌ version.json not found in ${repoDir}${ANSI.reset}`);
-        process.exit(1);
-    }
-    const vData = JSON.parse(fs.readFileSync(vJsonPath, 'utf8'));
+    const vData = fs.existsSync(srcVersionJsonPath) ? JSON.parse(fs.readFileSync(srcVersionJsonPath, 'utf8')) : JSON.parse(fs.readFileSync(vJsonPath, 'utf8'));
     const version = cliVersion || vData.version;
     const tagName = `updateAL${version}`;
     const releaseTitle = `update${version}`;
@@ -328,7 +327,7 @@ async function main() {
         if (statusOut) {
             console.log(`   📝 Committing & pushing v${version} metadata & changelog to ${REPO_OWNER}/${REPO_NAME} (main)...`);
             execSync('git add README.md docs/ version.json release.js', { cwd: repoDir, stdio: 'inherit' });
-            execSync(`git commit -m "docs(changelog): launch official web changelog & full release notes for v${version}"`, { cwd: repoDir, stdio: 'inherit' });
+            execSync(`git commit -m "docs(changelog): update official web changelog & release notes for v${version}${isPrerelease ? ' (pre-release)' : ''}"`, { cwd: repoDir, stdio: 'inherit' });
             execSync('git push origin main', { cwd: repoDir, stdio: 'inherit' });
             console.log(`   ${ANSI.green}✅ Pushed v${version} metadata & changelog to main!${ANSI.reset}`);
         }

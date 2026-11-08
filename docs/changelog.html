@@ -360,6 +360,56 @@
       text-transform: uppercase;
     }
 
+    .cl-badge-pre {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: rgba(245, 158, 11, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #fbbf24;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.22);
+    }
+
+    .cl-pre-download-box {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cl-pre-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 7px;
+      background: #f59e0b;
+      color: #0b0f19;
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+
+    .cl-pre-download-btn:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
     .cl-meta-summary {
       display: flex;
       flex-wrap: wrap;
@@ -676,11 +726,13 @@
             const cleanHeader = stripEmojis(rawLine.replace(/^[★\u2605]\s*/, ''));
             const verMatch = cleanHeader.match(/\(v?(\d+\.\d+(?:\.\d+)?)\)/i) || cleanHeader.match(/\bv(\d+\.\d+(?:\.\d+)?)\b/i);
             const version = verMatch ? verMatch[1] : '';
-            const title = cleanHeader.replace(/\s*\(v?\d+\.\d+(?:\.\d+)?\)\s*$/i, '').trim();
+            const isPre = /\[PRE-RELEASE\]|\[BETA\]/i.test(rawLine);
+            const title = cleanHeader.replace(/\s*\(v?\d+\.\d+(?:\.\d+)?\)\s*$/i, '').replace(/\[PRE-RELEASE\]/i, '').trim();
 
             curRelease = {
               version: version || 'Update',
               title: title || cleanHeader,
+              isPreRelease: isPre,
               date: '',
               summary: '',
               categories: []
@@ -750,7 +802,8 @@
 
       function updateStats() {
         if (allReleases.length === 0) return;
-        document.getElementById('stat-latest-ver').textContent = 'v' + allReleases[0].version;
+        const latestRel = allReleases.find(r => !r.isPreRelease) || allReleases[0];
+        document.getElementById('stat-latest-ver').textContent = 'v' + latestRel.version;
         document.getElementById('stat-total-releases').textContent = allReleases.length;
         let totalChanges = 0;
         allReleases.forEach(r => r.categories.forEach(c => { totalChanges += c.items.length; }));
@@ -770,9 +823,11 @@
         const q = searchQuery.trim().toLowerCase();
         const html = [];
         const tocHtml = [];
+        const firstStableIdx = allReleases.findIndex(r => !r.isPreRelease);
 
         allReleases.forEach((rel, idx) => {
-          const isLatest = idx === 0;
+          const isLatest = idx === firstStableIdx;
+          const isPre = !!rel.isPreRelease;
           const verMatch = ('v' + rel.version).toLowerCase().includes(q)
             || rel.title.toLowerCase().includes(q)
             || (rel.summary && rel.summary.toLowerCase().includes(q))
@@ -807,7 +862,7 @@
           const anchorId = 'v' + rel.version.replace(/[^a-zA-Z0-9]+/g, '-');
           tocHtml.push(`
             <a href="#${anchorId}" class="cl-toc-link ${tocHtml.length === 0 ? 'active' : ''}" data-target="${anchorId}">
-              v${escapeHtml(rel.version)}
+              v${escapeHtml(rel.version)} ${isPre ? '<span style="color:#fbbf24;font-size:0.65rem;margin-left:4px;">(Pre)</span>' : ''}
             </a>
           `);
 
@@ -815,6 +870,28 @@
           if (newCount > 0) summaryBadges.push(`<span class="cl-mini-stat">${newCount} new</span>`);
           if (fixCount > 0) summaryBadges.push(`<span class="cl-mini-stat">${fixCount} fixed</span>`);
           if (impCount > 0) summaryBadges.push(`<span class="cl-mini-stat">${impCount} improved</span>`);
+
+          let badgeHtml = '';
+          if (isPre) {
+            badgeHtml = '<span class="cl-badge-pre">⚡ Pre-Release</span>';
+          } else if (isLatest) {
+            badgeHtml = '<span class="cl-badge-latest">Latest</span>';
+          }
+
+          let preDownloadBoxHtml = '';
+          if (isPre) {
+            preDownloadBoxHtml = `
+              <div class="cl-pre-download-box">
+                <div style="font-size: 0.84rem; color: #fde68a; line-height: 1.5;">
+                  <strong>⚡ เวอร์ชันทดสอบ (Pre-Release / Testing Build):</strong> รุ่นนี้อยู่ระหว่างการทดสอบประสิทธิภาพ หากต้องการทดสอบความเร็วใหม่ สามารถดาวน์โหลดไฟล์ติดตั้งได้ที่นี่
+                </div>
+                <a href="https://github.com/Babydunx1/AutoLab-Release/releases/download/updateAL${escapeHtml(rel.version)}/AutoLab_Setup.exe" class="cl-pre-download-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  ดาวน์โหลด AutoLab_Setup.exe (v${escapeHtml(rel.version)})
+                </a>
+              </div>
+            `;
+          }
 
           const sectionsHtml = visibleCats.map(cat => {
             const itemsHtml = cat.items.map(it => {
@@ -854,7 +931,7 @@
               <div class="cl-meta">
                 <div class="cl-version-row">
                   <a href="#${anchorId}" class="cl-version-num">v${escapeHtml(rel.version)}</a>
-                  ${isLatest ? '<span class="cl-badge-latest">Latest</span>' : ''}
+                  ${badgeHtml}
                 </div>
                 ${rel.date ? `<div class="cl-version-date">${escapeHtml(rel.date)}</div>` : ''}
                 <div class="cl-meta-summary">${summaryBadges.join('')}</div>
@@ -863,6 +940,7 @@
               <div class="cl-content">
                 <h2 class="cl-entry-title">${escapeHtml(rel.title)}</h2>
                 ${rel.summary ? `<p class="cl-entry-summary">${escapeHtml(rel.summary)}</p>` : ''}
+                ${preDownloadBoxHtml}
                 <div class="cl-sections">
                   ${sectionsHtml}
                 </div>
